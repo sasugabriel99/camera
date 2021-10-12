@@ -12,7 +12,7 @@ function on_cam_success(stream)
 		alert("error."+err.message);
 	}
 	
-	var constraints = { audio: false, video: true };
+	var constraints = { audio: false, video: true ,facingMode:environment  };
 	navigator.mediaDevices.getUserMedia(constraints)
 	.then(on_cam_success)
 	.catch(on_cam_error);
